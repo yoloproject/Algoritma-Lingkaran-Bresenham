@@ -1,48 +1,27 @@
-# Aplikasi Garis Dengan Algoritma DDA
-Pembuatan aplikasi Garis menggunakan Algoritma DDA dengan menggunakan libray openGL dan Glut untuk membentuk sebuah garis.
+# Aplikasi Lingkaran Dengan Pengembangan Algoritma Bresenham
+Pembuatan aplikasi Garis menggunakan Algoritma Pengembangan Bresenham dengan menggunakan libray openGL dan Glut untuk membentuk sebuah garis.
 
 ## Deskripsi
-Algoritma DDA adalah algoritma pembentukan garis menggunakan perhitungan Dx dan Dy. Garis dibuat berdasarkan 2 Titik, yaitu titik awal (x,y) dan titik akhir (x,y). Algoritma ini akan membentuk pixel dari perpindahan tiap titik (x,y) dimulai dari titik awal sampai titik akhir sehingga terbentuklah sebuah garis.
+Algoritma Lingkaran Pengembangan Bresenham adalah algoritma pembentukan lingkaran dengan cara menentukan titik pusat lingkaran dan jari-jari lingkaran. Algoritma ini menggunakan 8 titik simeteri, sehingga cukup membuat garis melengkung 45 Derajat maka akan membentuk lingkaran yang lengkap.
 
 ## Getting Started
 Menentukan Titik
 ```
-//tentukan titik awal dan akhir
-x2 = 0;
-y2 = 300;
-x1 = 500;
-y1 = 0;
-x= x1;
-y= y1;
+//tentukan titik pusat dan jari-jari
+r = 20;
+xc = 100;
+yc = 100;
 ```
 ## Masalah Yang Ditemukan
-1. Tidak dapat membuat garis vertikal dan horizontal
-2. Titik awal harus lebih kecil dari titik akhir
+
 
 ## Penyelesaian Masalah
-1. Perbaikan Looping
-```
-int iterasi = 0;
-//perulangan untuk menggambar titik-titik 
-while (iterasi != steps)
-{
-	x += x_inc;
-	y += y_inc;
 
-	iterasi++;
-	glVertex2i(x, y); // gambar 
-}
-```
-2. Perbaikan Steps
-```
-  //hitung steps
-if (abs(dx) > abs(dy)) {
-	steps = abs(dx);	
-}
-else steps = abs(dy);
-```
 ## Built With
 * Microsoft Visual Studio Community 2015
+
+## Bug
+* [Create issues](https://github.com/yoloproject/Algoritma-Lingkaran-Bresenham/issues)
 
 ## Contributors
 * [Galang Rambu Anarki](https://dinus.ac.id/mahasiswa/A11.2015.08929)
